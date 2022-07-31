@@ -53,4 +53,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 zstyle ':completion:*' rehash true
 
 # Load secrets from separate file, not in version control
-source ~/.zshrc_secrets
+[ -f "${HOME}/.zshrc_secrets" ] && source ~/.zshrc_secrets
