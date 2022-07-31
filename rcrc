@@ -1,0 +1,3 @@
+# Files that should not be treated as dotfiles.
+# They just exist for documentation
+EXCLUDES="*.md LICENSE"

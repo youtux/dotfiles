@@ -1,0 +1,22 @@
+[directory]
+truncation_length = 0  # 0 means no truncation
+
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[cmd_duration]
+show_notifications = true  # Default min_time_to_notify is 45s
+
+[status]
+disabled = false
+
+[sudo]
+disabled = false
