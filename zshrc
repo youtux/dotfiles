@@ -15,6 +15,8 @@ DISABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 export ZSH=$HOME/.oh-my-zsh
+# git clone https://github.com/davidparsson/zsh-pyenv-lazy.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/pyenv-lazy
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 plugins=(git pyenv-lazy zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
@@ -32,8 +34,8 @@ export PROJECT_HOME="$HOME/Developer"
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 export PATH="$HOME/.poetry/bin:$PATH"
 
-eval "$(starship init zsh)"
-eval "$(direnv hook zsh)"
+(( $+commands[starship] )) && eval "$(starship init zsh)"
+(( $+commands[direnv] )) && eval "$(direnv hook zsh)"
 
 export EDITOR="code"
 export GPG_TTY=$(tty)
