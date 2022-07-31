@@ -4,7 +4,7 @@
 ```
 brew install rcm
 
-git clone git@github.com:youtux/dotfiles.git ~/.dotfiles
+git clone https://github.com/youtux/.dotfiles.git ~/.dotfiles
 
 rcup
 ```
