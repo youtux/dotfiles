@@ -14,11 +14,8 @@ DISABLE_CORRECTION="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-# Disable built-in zsh time function
-disable -r time
-
 export ZSH=$HOME/.oh-my-zsh
-plugins=(git)
+plugins=(git pyenv-lazy zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
@@ -28,7 +25,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root cursor)
 # pyenv init
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Developer"
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# Using zsh plugin pyenv-lazy, since pyenv would add 100ms of startup time
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 # pythonrc
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
@@ -41,9 +39,10 @@ export EDITOR="code"
 export GPG_TTY=$(tty)
 export PIPX_DEFAULT_PYTHON=python3.10
 
+# Disabled because it takes too long (+500ms startup time)
 # nvm
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # iTerm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
