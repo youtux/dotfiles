@@ -38,6 +38,7 @@ export PYTHONSTARTUP="$HOME/.pythonrc.py"
 export EDITOR="codew"
 export PIPX_DEFAULT_PYTHON=python3.12
 
+
 # Disabled because it takes too long (+500ms startup time)
 # nvm
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
