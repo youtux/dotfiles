@@ -23,7 +23,6 @@ source $ZSH/oh-my-zsh.sh
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets root cursor)
 
-
 # pyenv init
 export WORKON_HOME="$HOME/.virtualenvs"
 export PROJECT_HOME="$HOME/Developer"
