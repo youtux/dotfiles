@@ -17,7 +17,7 @@ COMPLETION_WAITING_DOTS="true"
 export ZSH=$HOME/.oh-my-zsh
 # git clone https://github.com/davidparsson/zsh-pyenv-lazy.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/pyenv-lazy
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-plugins=(git pyenv-lazy zsh-syntax-highlighting)
+plugins=(git pyenv-lazy zsh-syntax-highlighting docker)
 source $ZSH/oh-my-zsh.sh
 
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
@@ -32,25 +32,22 @@ export PROJECT_HOME="$HOME/Developer"
 
 # pythonrc
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
-export PATH="$HOME/.poetry/bin:$PATH"
 
 (( $+commands[starship] )) && eval "$(starship init zsh)"
 (( $+commands[direnv] )) && eval "$(direnv hook zsh)"
 
-export EDITOR="code"
-export GPG_TTY=$(tty)
-export PIPX_DEFAULT_PYTHON=python3.10
+export EDITOR="codew"
+export PIPX_DEFAULT_PYTHON=python3.11
 
 # Disabled because it takes too long (+500ms startup time)
 # nvm
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# iTerm2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 # Automatic rehash
 zstyle ':completion:*' rehash true
 
 # Load secrets from separate file, not in version control
 [ -f "${HOME}/.zshrc_secrets" ] && source ~/.zshrc_secrets
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

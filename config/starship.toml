@@ -1,3 +1,6 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 [directory]
 truncation_length = 0  # 0 means no truncation
 
@@ -19,4 +22,7 @@ show_notifications = true  # Default min_time_to_notify is 45s
 disabled = false
 
 [sudo]
+disabled = false
+
+[direnv]
 disabled = false
