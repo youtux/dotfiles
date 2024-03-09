@@ -9,7 +9,7 @@ This repository contains my personal dotfiles managed by [chezmoi](https://githu
 2. Clone this repository to your local machine.
 
     ```bash
-    chezmoi init --apply https://github.com/youtux/.dotfiles.git
+    chezmoi init --apply youtux
     ```
 
 Now, your dotfiles are managed by chezmoi!
