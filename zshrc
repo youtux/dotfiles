@@ -37,7 +37,7 @@ export PYTHONSTARTUP="$HOME/.pythonrc.py"
 (( $+commands[direnv] )) && eval "$(direnv hook zsh)"
 
 export EDITOR="codew"
-export PIPX_DEFAULT_PYTHON=python3.11
+export PIPX_DEFAULT_PYTHON=python3.12
 
 # Disabled because it takes too long (+500ms startup time)
 # nvm
