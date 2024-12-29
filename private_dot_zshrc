@@ -107,10 +107,6 @@ export LC_CTYPE="en_US.UTF-8"
 # Don't run magic when pasting text in the terminal
 DISABLE_MAGIC_FUNCTIONS=true
 
-# pyenv init
-#export WORKON_HOME="$HOME/.virtualenvs"
-#export PROJECT_HOME="$HOME/Developer"
-
 # pythonrc
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
