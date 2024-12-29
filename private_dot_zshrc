@@ -108,14 +108,13 @@ export LC_CTYPE="en_US.UTF-8"
 DISABLE_MAGIC_FUNCTIONS=true
 
 # pyenv init
-export WORKON_HOME="$HOME/.virtualenvs"
-export PROJECT_HOME="$HOME/Developer"
+#export WORKON_HOME="$HOME/.virtualenvs"
+#export PROJECT_HOME="$HOME/Developer"
 
 # pythonrc
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
 export EDITOR="codew"
-export PIPX_DEFAULT_PYTHON=python3.13
 
 
 # Disabled because it takes too long (+500ms startup time)
