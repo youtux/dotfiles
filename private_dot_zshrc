@@ -110,7 +110,8 @@ DISABLE_MAGIC_FUNCTIONS=true
 # pythonrc
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
-export EDITOR="codew"
+export EDITOR="nano"
+export VISUAL="code -w"
 
 
 # Disabled because it takes too long (+500ms startup time)
