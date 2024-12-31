@@ -36,7 +36,7 @@
 	defaultBranch = main
 [gpg]
 	format = ssh
-{{ if .use1password }}
+{{ if .git_use1password }}
 [gpg "ssh"]
 	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 {{ end }}
