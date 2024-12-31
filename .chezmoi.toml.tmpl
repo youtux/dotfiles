@@ -1,2 +1,11 @@
+{{- $email := promptStringOnce . "email" "Git email address" "778703+youtux@users.noreply.github.com" -}}
+{{- $git_signingkey := promptStringOnce . "git_signingkey" "Git Signing Key path" -}}
+{{- $use1password := promptBoolOnce . "use1password" "Use 1password to sign commits" false -}}
+
+[data]
+    email = {{ $email | quote }}
+    git_signingkey = {{ $git_signingkey | quote }}
+    git_use1password = {{ $use1password }}
+
 [git]
     autoCommit = true
