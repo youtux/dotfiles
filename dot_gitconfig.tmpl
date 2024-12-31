@@ -1,7 +1,9 @@
 [user]
 	name = Alessio Bogon
 	email = {{ .email | quote }}
+	{{- if .git_signingkey }}
 	signingkey = {{ .git_signingkey | quote }}
+	{{- end }}
 [core]
 	excludesfile = ~/.gitignore_global
 [color]

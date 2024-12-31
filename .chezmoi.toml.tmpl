@@ -4,7 +4,9 @@
 
 [data]
     email = {{ $email | quote }}
+    {{- if $git_signingkey }}
     git_signingkey = {{ $git_signingkey | quote }}
+    {{- end }}
     git_use1password = {{ $use1password }}
 
 [git]
