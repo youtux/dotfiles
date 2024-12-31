@@ -1,15 +1,9 @@
 [user]
 	name = Alessio Bogon
-	email = 778703+youtux@users.noreply.github.com
-	signingkey = /Users/youtux/.ssh/id_m1pro.pub
+	email = {{ .email | quote }}
+	signingkey = {{ .git_signingkey | quote }}
 [core]
-	excludesfile = /Users/youtux/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+	excludesfile = ~/.gitignore_global
 [color]
 	ui = true
 [push]
@@ -36,15 +30,15 @@
 	process = git-lfs filter-process
 	required = true
 [commit]
-	template = /Users/youtux/.stCommitMsg
+	template = ~/.stCommitMsg
 	gpgsign = true
 [init]
 	defaultBranch = main
 [gpg]
 	format = ssh
 [gpg "ssh"]
-  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [maintenance]
-	repo = /Users/youtux/.local/share/chezmoi
+	repo = ~/.local/share/chezmoi
 [rerere]
 	enabled = true
