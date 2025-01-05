@@ -1,6 +1,6 @@
 zmodule joke/zim-mise
 
-# Start configuration added by Zim install {{ "{{{" }}
+# Start configuration added by Zim install {{{
 #
 # This is not sourced during shell startup, and it's only used to configure the
 # zimfw plugin manager.
@@ -25,14 +25,14 @@ zmodule utility
 # Prompt
 #
 
-{{ if not .use_starship }}
-# Exposes to prompts how long the last command took to execute, used by asciiship.
-zmodule duration-info
-# Exposes git repository status information to prompts, used by asciiship.
-zmodule git-info
-# A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
-zmodule asciiship
-{{ end }}
+if (( ! ${+commands[starship]} )); then
+    # Exposes to prompts how long the last command took to execute, used by asciiship.
+    zmodule duration-info
+    # Exposes git repository status information to prompts, used by asciiship.
+    zmodule git-info
+    # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+    zmodule asciiship
+fi
 
 #
 # Completion
@@ -56,12 +56,12 @@ zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 # Fish-like autosuggestions for Zsh.
 zmodule zsh-users/zsh-autosuggestions
-# {{ "}}}" }} End configuration added by Zim install
+# }}} End configuration added by Zim install
 
 zmodule joke/zim-chezmoi
-{{ if .use_starship }}
-zmodule joke/zim-starship
-{{ end }}
+if (( ${+commands[starship]} )); then
+    zmodule joke/zim-starship
+fi
 zmodule direnv
 zmodule fzf
 
