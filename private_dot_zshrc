@@ -121,9 +121,6 @@ else
   export VISUAL="$EDITOR"
 fi
 
-# Avoid warning in Ubuntu: https://github.com/zimfw/zimfw/wiki/Troubleshooting#completion-is-not-working
-# skip_global_compinit=1
-
 # Disabled because it takes too long (+500ms startup time)
 # nvm
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
