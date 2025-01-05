@@ -29,8 +29,10 @@ zmodule utility
 # zmodule duration-info
 # Exposes git repository status information to prompts, used by asciiship.
 # zmodule git-info
+{{ if not .use_starship }}
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 # zmodule asciiship
+{{ end }}
 
 #
 # Completion
@@ -57,7 +59,9 @@ zmodule zsh-users/zsh-autosuggestions
 # }}} End configuration added by Zim install
 
 zmodule joke/zim-chezmoi
+{{ if .use_starship }}
 zmodule joke/zim-starship
+{{ end }}
 zmodule direnv
 zmodule fzf
 
