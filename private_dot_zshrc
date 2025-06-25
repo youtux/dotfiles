@@ -29,6 +29,9 @@ SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
 
+# Set `less` options, before `zim` has a chance to do that (it would disable mouse support :facepalm:)
+export LESS="--ignore-case --jump-target=4 --LONG-PROMPT --quit-if-one-screen --RAW-CONTROL-CHARS"
+
 # -----------------
 # Zim configuration
 # -----------------
