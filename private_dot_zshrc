@@ -132,6 +132,11 @@ fi
 # Automatic rehash
 zstyle ':completion:*' rehash true
 
+# Set NODE_EXTRA_CA_CERTS if authorized CA certs file exists
+if [[ -f "${HOME}/.authorized_ca_certs.pem" ]]; then
+  export NODE_EXTRA_CA_CERTS="${HOME}/.authorized_ca_certs.pem"
+fi
+
 # Load secrets from separate file, not in version control
 [ -f "${HOME}/.zshrc_secrets" ] && source ~/.zshrc_secrets
 
