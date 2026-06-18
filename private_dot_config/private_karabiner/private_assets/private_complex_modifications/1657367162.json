@@ -1,0 +1,32 @@
+{
+  "title": "Left Command to Left Click in NVIDIA GeForce NOW",
+  "rules": [
+    {
+      "description": "Use Left Command key as Left Click for  NVIDIA GeForce NOW gaming",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": {
+            "pointing_button": "button1"
+          },
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.nvidia\\.gfnpc\\.mall$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
